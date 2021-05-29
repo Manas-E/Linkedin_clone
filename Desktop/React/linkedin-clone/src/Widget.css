@@ -1,0 +1,68 @@
+.widget{
+    position: sticky;
+   
+    right:0%;
+    top: 80px;
+    
+    width: 15%;
+
+    background-color: white;
+    border-radius: 10px;
+    border: 1px solid lightgray;
+    height: fit-content;
+    
+    display: flex;
+    flex-direction: column;
+    margin: 0 10px;
+    margin-left: 220px;
+}
+.widgetHeader{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+
+}
+
+.blue{
+
+    color: rgb(18, 99, 248) !important;
+}
+.widgetHeader >h2{
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.article{
+    display: flex;
+    padding: 10px;
+    cursor: pointer;
+    align-items: center;
+}
+
+.article:hover{
+    background-color: whitesmoke;
+}
+
+.articleleft{
+    color: rgb(18, 99, 248);
+    margin-right: 5px;
+}
+
+.articleright >h3{
+font-size: 18px;
+margin: 0;
+font-weight: 400;
+}
+.articleright >p{
+
+font-size: 12px;
+    color: gray;
+    
+    margin: 0;
+
+}
+
+.articleright >h3:hover{
+    text-decoration: underline;
+    }

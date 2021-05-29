@@ -1,0 +1,56 @@
+
+h2{
+    margin: 0px;
+    font-size: 18px;
+}
+
+
+p{
+    margin: 0px;
+    font-size: 15px;
+
+}
+
+
+.post{
+    background-color: white;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    width: 178%;
+}
+.postHeader{
+    display: flex;
+    margin-bottom: 10px;
+    align-items: center;
+}
+.postInfo{
+    margin-left: 10px;
+}
+
+.postInfo >p{
+    color: gray;
+
+}
+.postbody{
+
+    overflow-wrap: anywhere;
+}
+
+.postbody > p{
+    font-size: 18px;
+    font-weight: 200;
+    margin-left: 50px;
+}
+
+.post_buttons{
+
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.MuiAvatar-colorDefault{
+
+    background-color:  rgb(124, 187, 250) !important;
+
+}
