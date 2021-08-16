@@ -1,0 +1,178 @@
+.profileScreen{
+    height: 100vw;
+    color: white;
+
+    background-image: linear-gradient(
+        180deg,          
+   
+        rgb(29, 26, 26),
+
+        rgb(0, 0, 0)
+            );
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 300;
+    font-size: 0.8rem;
+    }
+
+.profileScreen_body{
+
+    display: flex;
+    flex-direction: column;
+    
+    width:50%;
+    max-width: 600px;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    
+}
+
+.profileScreen_info{
+
+    display: flex;
+}
+
+
+.profileScreen_avatar{
+
+    height: 70px;
+}
+
+
+
+.profileScreen_body >h1{
+
+    margin-top: 100px;
+    text-align: left;
+
+    font-size: 30px;
+    font-weight: 400;
+    font-weight: lighter;
+    
+    border-bottom: 1px solid black;
+    margin-bottom: 20px;
+
+}
+
+
+
+.profileScreen_detail{
+
+    margin: 0px 10px;
+
+    width: 100%;
+    max-width: 500px;
+    
+}
+
+.profileScreen_detail > h1{
+
+    font-size: 0.8rem;
+    background-color: grey;
+    padding: 10px;
+    padding-left: 10px; 
+
+    margin-top: 0px;
+
+}
+
+.plan_date{
+
+    font-size: 0.8rem;
+    
+    margin-top: 0px;
+    font-weight: lighter;
+
+    color: gray;
+}
+
+
+
+
+.plan_detail_name{
+
+}
+
+.plan_detail{
+
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    
+    
+    opacity: 0.8;
+}
+
+.plan_detail:hover{
+
+    opacity: 1;
+}
+
+
+.plan_detail_name > h4{
+    font-size: 0.8rem;
+    padding-left: 10px; 
+
+    font-weight: lighter;
+    margin: 0px;
+
+    color: white;
+    
+}
+
+.plan_detail_name > h5{
+    font-size: 0.8rem;
+    padding-left: 10px; 
+
+    font-weight: lighter;
+    margin: 0px;
+    color: white;
+    
+}
+
+
+
+.plan_Button{
+
+    justify-content: right;
+    font-size: 0.8rem;
+    background-color: #e50914;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+
+    font-weight: 600;
+ }
+
+.currentplanButton{
+    font-size: 0.8rem;
+    background-color: gray;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+
+    width:30%;
+    cursor: pointer;
+
+    
+    font-weight: 600;
+}
+
+
+.signOut{
+
+    width:100%;
+    margin-top: 20px;
+    font-size: 0.8rem;
+    background-color: #e50914;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    
+    cursor: pointer;
+
+    font-weight: 600;
+}
