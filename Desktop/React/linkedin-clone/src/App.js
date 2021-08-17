@@ -59,7 +59,9 @@ function App() {
 
 {/* 
     widget  */}
+     <div className="sidebardiv">
   <Widget/>
+    </div>
     
 
 

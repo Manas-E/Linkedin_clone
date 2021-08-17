@@ -10,13 +10,15 @@ import SendIcon from '@material-ui/icons/Send';
 import { useSelector } from 'react-redux';
 import { selectUser } from './features/userSlice';
 
-function Post({name,desc,photoURL,msg}) {
+import {forwardRef} from "react";
+
+const  Post = forwardRef(({name,desc,photoURL,msg},ref)=> {
 
     const user = useSelector(selectUser);
 
 
     return (
-        <div className="post">
+        <div ref={ref} className="post">
             
             <div className="postHeader">
                 <Avatar className="MuiAvatar-colorDefault" src={photoURL} >{!photoURL && name[0]  }</Avatar>
@@ -42,6 +44,6 @@ function Post({name,desc,photoURL,msg}) {
             </div>
         </div>
     )
-}
+})
 
 export default Post
