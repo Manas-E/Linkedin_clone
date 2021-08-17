@@ -1,3 +1,25 @@
+# LinkedIn UI Clone 
+A replication of linkedin created with React.js and firebase. Implemented with redux to monitor user login and logout and material-ui Icons are used to make it look more identical. Enhanced with google news api to fetch news from tech domain.
+
+Tech Used:
+- React.js
+- Redux
+- Material-UI
+- Firebase
+
+# Features 
+
+- Login and Register
+- Add New post on the wall
+- View News
+- Subtle animations 
+
+# Showcase
+
+## Login Screen
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
