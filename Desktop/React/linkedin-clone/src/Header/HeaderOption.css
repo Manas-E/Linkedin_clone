@@ -6,7 +6,6 @@
 
 
 
-
     margin-right: 0px;
     align-items: center;
     margin-left: 20px;
@@ -15,6 +14,23 @@
 .headerOption:hover{
 
         color: black;
+}
+
+.icon{
+    font-size: 1.8rem;
+}
+
+
+@media screen and (max-width:640px){
+    .icon{
+        font-size: 1.5rem;
+    } 
+    .HeaderOption_title{
+        display: none;
+    }
+    .headerOption{
+        margin-left:10px;
+    }
 }
 
 .HeaderOption_title{
@@ -29,3 +45,4 @@ object-fit: contain;
 height: 25px !important;
 width: 25px !important;
 }
+

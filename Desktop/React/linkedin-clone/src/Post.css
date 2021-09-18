@@ -18,11 +18,21 @@ p{
     margin-bottom: 20px;
     border-radius: 10px;
     width: 178%;
+    z-index: 1;
+ 
+
 }
+
+@media screen and (max-width: 576px) {
+    .post{
+        width: auto;
+    }
+  }
 .postHeader{
     display: flex;
     margin-bottom: 10px;
-    align-items: center;
+    align-items: center;    z-index: 1;
+
 }
 .postInfo{
     margin-left: 10px;
@@ -54,3 +64,30 @@ p{
     background-color:  rgb(124, 187, 250) !important;
 
 }
+
+@keyframes animatedBackground {
+    from {
+        background-size: 200px;
+    
+    }
+    to {
+        background-size: 250px;
+   
+    }
+  } 
+.likeCounter{
+    border-bottom-style: solid;
+    border-color : #CECAD4;
+
+    padding: 3px 0;
+    margin-top: 20px;
+    border-width: thin;
+    width:overflow;
+}
+
+
+.likeCounter >h4{
+    color:#CECAD4;
+}
+
+

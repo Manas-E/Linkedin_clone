@@ -31,7 +31,7 @@ const sendPost = (e) =>{
         msg:input,
         photoURL:user.photoURL || "",
         timestamp: firebase.firestore.FieldValue.serverTimestamp(),
-
+        likeCount:0,
     });
 }
 
@@ -54,7 +54,6 @@ useEffect(() => {
             <div className="feedcontainer_input">
                 <div className="feed_input">
                     <form>
-
                     <CreateIcon />
                     <input value={input} onChange={(e)=>{ setinput(e.target.value) }} type="text" />
                     <button onClick={sendPost} type="submit" >Send</button>
@@ -80,10 +79,12 @@ useEffect(() => {
         <FlipMove>
         { posts.map(({id, data: {name,desc,msg,photoURL}}) =>
             <Post key={id}
+                  idData={id}
                   name={name}
                   desc={desc}
                   msg={msg}
-                  photoURL={photoURL}   />)}
+                  photoURL={photoURL} 
+                    />)}
         </FlipMove>
 
       

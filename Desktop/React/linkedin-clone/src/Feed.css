@@ -1,11 +1,12 @@
 .feed{
-    position: absolute;
+    position: sticky;
+     
 
-    left: 15%;   
     top:80px;
     flex: 0.6;
+    width:auto;
     margin:  0 80px;
-    
+    padding-right:300px;
 }
 
 .feedcontainer_input{
@@ -29,6 +30,14 @@
     color: gray;
     padding: 15px;
 }
+
+
+@media screen and (max-width: 576px) {
+    .feedcontainer_input{
+        width: auto;
+
+    }
+  }
 
 .feed_input > form{
 

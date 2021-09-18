@@ -1,9 +1,10 @@
 .widget{
-    position: sticky;
-    top: 80 px;  
 
+    position: sticky;
+    top: 80px;
     flex: 0.2;
-    width: 20%;
+    margin:0;
+    width: 15vw;
 
     background-color: white;
     border-radius: 10px;
@@ -12,7 +13,6 @@
     
     border-radius: 10px;    
     height: fit-content;
-    margin-left: 1020px;
     
 
 }

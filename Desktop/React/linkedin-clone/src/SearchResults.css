@@ -1,0 +1,66 @@
+
+
+.error{
+    display:"flex";
+    justify-content:center;
+    height: 100vh;
+    background-color:black;
+}
+
+.error > h1 {
+    
+    text-align:"center";
+    align-items:"center";
+    font-size:4rem;
+    color:white;
+    z-index:10;
+}
+
+.searchFeed{
+    
+    background-color: white;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    width: 30vw;
+    border-radius:10px;
+    border: 10px;
+    z-index: 1;
+    align-items: center;
+    justify-content:"center";
+ 
+
+}
+
+
+@media screen and (max-width: 576px) {
+    .post{
+        width: 30%;
+    }
+  }
+
+.postHeader{
+    display: flex;
+    margin-bottom: 10px;
+    align-items: center;    z-index: 1;
+
+}
+.postInfo{
+    margin-left: 10px;
+}
+
+.postInfo >p{
+    color: gray;
+
+}
+.postbody{
+
+    overflow-wrap: anywhere;
+}
+
+.postbody > p{
+    font-size: 18px;
+    font-weight: 200;
+    margin-left: 50px;
+}
+

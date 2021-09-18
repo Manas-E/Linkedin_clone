@@ -20,4 +20,22 @@
 .inputoption >h4{
     margin-left: 5px;
         
+} 
+
+@keyframes animated {
+    from {
+        transform: rotate(10deg);
+
+    }
+    to {
+        transform: rotate(-10deg);
+    }
+  }
+
+.likeAnimate{
+    z-index: 100;
+ 
+   color:red;
+   animation: animated 0.15s 4;
+   
 }

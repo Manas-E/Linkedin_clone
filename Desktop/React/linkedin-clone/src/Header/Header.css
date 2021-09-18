@@ -42,7 +42,6 @@
 .headerSearch{
 
     display: flex;
-    align-items: center;
 
 
     background: rgb(225, 233, 241);
@@ -53,14 +52,41 @@
     padding: 10px;
 }
 
-.headerSearch > input{
+.headerSearch  > input{
+    
     border: none;
     background: none;
     outline: none;
+    margin-left: 10px;
+    font-size: 1rem;
+
+} 
+  
+
+.SearchIcon{
+    
+    margin-top: 1px;
+
 } 
 
+
+
 .headerRight{
+    display: flex;
+    align-items: center;    
+}
+
+
+
+
+.hide{
     display: flex;
 
 }
 
+@media screen and (max-width:640px){
+    .hide{
+       display: none;
+    } 
+    
+}

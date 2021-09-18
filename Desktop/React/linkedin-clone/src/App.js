@@ -1,74 +1,35 @@
 import './App.css';
-import Header from './Header/Header'
-import SideBar from "./SideBar"
-import Feed from "./Feed"
-import { login, logout, selectUser } from './features/userSlice';
-import Login from './Login';
-import {useSelector, useDispatch} from 'react-redux'
-import { useEffect } from 'react';
-import { auth } from './firebasefile';
-import Widget from "./Widget";
+
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
+
+import SearchResults from './SearchResults';
+
+import HomeScreen from './HomeScreen';
 
 
 function App() {
  
-  const user = useSelector(selectUser)
-
-  const dispatch = useDispatch()
-
-  useEffect(()=>{
-    auth.onAuthStateChanged((userAuth)=>{
-      if(userAuth)
-      {
-        console.log("hello",userAuth);
-
-        dispatch(login({
-          
-          email: userAuth.email,
-          uid:userAuth.uid,
-          displayName:userAuth.displayName,
-          photoURL:userAuth.photoURL,
-        }))
-      }
-      else{
-          dispatch(logout());
-
-
-      }
-    })
-  },[]);
-
-
+  
 
   return (
-    <div className="App">
+    <Router>
+       <Switch>
+          <Route exact path="/">
+            <HomeScreen />
+          </Route>
+          <Route path="/search">
+            <SearchResults />
+          </Route>
 
-{/* Header */}
+      </Switch>
 
-    <Header />
+    </Router>
 
-    {(!user)? <Login /> : 
-    ( 
-
-    <div className="app_body">
-    <div className="sidebardiv">
-      <SideBar />
-    </div>
-
-      <Feed />
-
-{/* 
-    widget  */}
-     <div className="sidebardiv">
-  <Widget/>
-    </div>
-    
-
-
-
-    </div>
-    )}
-    </div>
     
   );
 }

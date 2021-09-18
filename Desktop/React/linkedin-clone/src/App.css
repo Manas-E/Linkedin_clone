@@ -14,11 +14,43 @@
 
  margin-top: 20px;
  display: flex;
- 
+ flex:1;
+flex-direction : row;
+
 
 }
+
+
+
 
 .sidebardiv{
     position: sticky;
     top: 80px;
+    left:80px;  
+    padding-right: 20px;
+
+}
+
+.sidebardivright{
+    position: sticky;
+
+    top: 80px;
+
+}
+
+@media screen and (max-width:640px){
+
+    .sidebardiv{
+        display: none;
+    
+    }
+    .app_body{
+
+      
+      background-color:black;
+
+     
+     }
+    
+ 
 }

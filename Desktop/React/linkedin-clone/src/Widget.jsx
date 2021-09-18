@@ -16,7 +16,7 @@ function Widget() {
         const redirect="window.location.href='https://www.google.com'";
   return   <div className="article">
         <div className="articleleft"><FiberManualRecordIcon className="bullet"/> </div>
-<div onClick={()=>{window.location.replace('https://www.google.com')}} className="articleright">
+<div onClick={()=>{window.open(url);}} className="articleright">
         <h3   >{heading}</h3>
 
         <p>{sub}</p>
