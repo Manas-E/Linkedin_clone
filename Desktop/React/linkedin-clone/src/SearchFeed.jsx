@@ -4,7 +4,6 @@ import {forwardRef} from "react";
 import { Avatar } from '@material-ui/core'
 
 
-
 const SearchFeed =forwardRef(({name,desc,photoURL,msg},ref)=>{
     return (
         <div ref={ref} className="searchFeed"> 
