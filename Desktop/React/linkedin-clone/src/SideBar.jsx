@@ -18,7 +18,10 @@ function SideBar() {
 
     const user = useSelector(selectUser);
 
-
+    if(user && !user?.photoURL)
+        return (
+            null  
+        )
 
 
     return (
@@ -26,9 +29,9 @@ function SideBar() {
             <div className="sidebartop">
 
                 <img  src="https://analyticsindiamag.com/wp-content/uploads/2020/10/7d744a684fe03ebc7e8de545f97739dd.jpg"/>
-                <Avatar className='sidebartopAvatar' src={user.photoURL}>{!user.photoURL && user.displayName[0]}</Avatar>
-                <h2>{user.displayName}</h2>
-                <h4>{user.email}</h4>
+                <Avatar className='sidebartopAvatar' src={!user?.photoURL && ""}>{!user?.photoURL && !user?.displayName[0] && ""}</Avatar>
+                <h2>{user?.displayName}</h2>
+                <h4>{user?.email}</h4>
 
 
             </div>

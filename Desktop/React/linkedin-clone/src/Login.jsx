@@ -16,34 +16,33 @@ function Login() {
     const dispatch = useDispatch();
 
 
-    const register=()=>{
+    const register= async ()=>{
         console.log(name.current.value,"::", photoURL.current.value);
 
         if(name.current.value!="")
-        auth.createUserWithEmailAndPassword(email.current.value,password.current.value)
-        .then((userAuth)=>{
+            await  auth.createUserWithEmailAndPassword(email.current.value,password.current.value)
+         .then( async (userAuth)=>{
            
-
-            userAuth.user.updateProfile({
+            console.log(userAuth," this is user auth")
+            await userAuth.user.updateProfile({
                 displayName:name.current.value,
                 photoURL: photoURL.current.value,
-            })
-            
-            .then(()=>{
+            }).then( ()=>{
                 console.log("=======",userAuth);
 
-                alert(userAuth);
+                alert("Registration Successful! Press ok to Continue");
     
                 dispatch(login({
                     email: userAuth.user.email,
                     uid:userAuth.user.uid,
-                    displayName:name.current.value,
-                    photoURL: photoURL.current.value,
+                    displayName: userAuth.user.displayName,
+                    photoURL: userAuth.user.photoURL,
                 }))
             })  
         })
         .catch((error)=>{alert(error.message)});;
 
+      
     }
 
     const loginto=(e)=>{

@@ -8,13 +8,19 @@ import { selectUser } from '../features/userSlice';
 function HeaderOption({avatar,Icon, title,onClick}) {
 
     const user = useSelector(selectUser);
-    console.log(user,"<>");
-    console.log(user?.photoURL," = ", user?.displayName[0])
+    
+    if(user && !user?.photoURL)
+        return (
+           null
+        )
+
     return (
+
+
         <div className="headerOption">
             <div className="HeaderOption_icon" onClick={onClick}>
                 {Icon && <Icon className="icon" />}
-                {avatar &&  ( <Avatar className="HeaderOption_icon" src={user?.photoURL}>{!user?.photoURL && user?.displayName[0]}</Avatar>)}
+                {avatar &&  ( <Avatar className="HeaderOption_icon" src={!user?.photoURL && ""}>{!user?.photoURL && !user?.displayName[0] && "" }</Avatar>)}
             </div>
 
             <div >
