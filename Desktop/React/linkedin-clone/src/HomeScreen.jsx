@@ -8,6 +8,10 @@ import {useSelector, useDispatch} from 'react-redux'
 import { useEffect } from 'react';
 import { auth } from './firebasefile';
 import Widget from "./Widget";
+import "./App.css";
+
+
+
 
 function HomeScreen(){
     const user = useSelector(selectUser)

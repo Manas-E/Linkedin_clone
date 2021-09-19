@@ -5,8 +5,7 @@
     top:80px;
     flex: 0.6;
     width:auto;
-    margin:  0 80px;
-    padding-right:300px;
+    margin:  0 50px;
 }
 
 .feedcontainer_input{
@@ -16,7 +15,10 @@
     border-radius: 10px;
     margin-bottom: 20px;
 
-    width: 180%;
+    width: 50vw;
+
+
+
 }
 .feed_input{
     
@@ -32,10 +34,13 @@
 }
 
 
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 700px) {
     .feedcontainer_input{
         width: auto;
 
+    }
+    .feed{
+        margin:0;
     }
   }
 

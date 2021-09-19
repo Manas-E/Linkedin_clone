@@ -6,6 +6,7 @@ import axios from "axios"
 import requests from './request';
 
 
+
 function Widget() {
 
     const [articles,setarticles] = useState([]);
@@ -13,7 +14,7 @@ function Widget() {
         return (str?.substr(0,n) + "...");
     }
     const news = (heading,sub,url)=>{
-        const redirect="window.location.href='https://www.google.com'";
+       
   return   <div className="article">
         <div className="articleleft"><FiberManualRecordIcon className="bullet"/> </div>
 <div onClick={()=>{window.open(url);}} className="articleright">

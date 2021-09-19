@@ -7,7 +7,7 @@ function InputOption({name,Icon,color,isClicked}) {
         <div className="inputoption" >
             
 
-            {Icon && <Icon className={`${isClicked ? "likeAnimate" : '' }`}  style={ { color: isClicked? "blue" : "" }}/>}
+            {Icon && <Icon className={`${isClicked ? "likeAnimate" : '' } icon`}  style={ { color: isClicked? "blue" : "" }}/>}
             
             <h4>{name}</h4>
             

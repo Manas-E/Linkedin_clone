@@ -3,7 +3,6 @@ import Header from './Header/Header'
 import { useHistory } from 'react-router-dom';
 import { db } from './firebasefile';
 import "./SearchResults.css"
-import Post from './Post';
 import SearchFeed from "./SearchFeed.jsx"
 
 import FlipMove from "react-flip-move";
@@ -18,7 +17,6 @@ function SearchResults() {
     const [searchData,setsearchData] =useState([]);
 
     console.log(searchName,">>>>>>>>>>>>>>>>>>>>",history);
-    var searches = [];
   
     useEffect( async ()=>{
         await db.collection("posts").get().then(

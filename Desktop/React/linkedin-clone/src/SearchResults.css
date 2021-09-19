@@ -33,9 +33,9 @@
 }
 
 
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 640px) {
     .post{
-        width: 30%;
+        width: 30vw;
     }
   }
 

@@ -1,5 +1,4 @@
 const API_KEY= process.env.REACT_APP_NEWS_API_KEY;
-const endpoint="";
 
 const baseURL = `https://gnews.io/api/v4/`
 

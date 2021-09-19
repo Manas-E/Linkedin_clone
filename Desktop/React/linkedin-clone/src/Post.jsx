@@ -8,12 +8,10 @@ import ThumbUpIcon from '@material-ui/icons/ThumbUp';
 import CommentIcon from '@material-ui/icons/Comment';
 import ShareIcon from '@material-ui/icons/Share';
 import SendIcon from '@material-ui/icons/Send';
-import DeleteIcon from '@material-ui/icons/Delete';
 import { useSelector } from 'react-redux';
 import { selectUser } from './features/userSlice';
 
 import {forwardRef} from "react";
-import Explosion from "react-explode/Guyam";
 import { db } from './firebasefile';
 
 

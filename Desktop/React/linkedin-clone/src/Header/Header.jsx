@@ -11,7 +11,6 @@ import { auth } from '../firebasefile';
 import { useDispatch, useSelector } from 'react-redux';
 import { logout, selectUser } from '../features/userSlice';
 import { db } from '../firebasefile';
-import SearchResults from '../SearchResults';
 import { useHistory } from 'react-router-dom';
 
 
@@ -19,7 +18,6 @@ function Header() {
 
     const [show,setshow] =useState(false);
     const [input1,setinput1] = useState(null);
-    const [search,setsearch]= useState(false);
     var nameFound=false;
     const history = useHistory();
 
@@ -96,7 +94,7 @@ function Header() {
                    
                     <SearchIcon  className="SearchIcon"/>
                     
-                        <input  onKeyDown={(e)=>( (e.key == "Enter")? sendSearch(): null )}  value={input1} onChange  ={(e)=>{setinput1(e.target.value)}} type="text" placeholder="Search for people" />
+                        <input   onKeyDown={(e)=>( (e.key === "Enter")? sendSearch(): null )}  value={input1} onChange  ={(e)=>{setinput1(e.target.value)}} type="text" placeholder="Search for people" />
                             
 
                 </div>
