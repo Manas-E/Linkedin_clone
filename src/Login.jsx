@@ -17,9 +17,12 @@ function Login() {
 
 
     const register= async ()=>{
-        console.log(name.current.value,"::", photoURL.current.value);
+        console.log(photoURL.current.value.length,"::", photoURL.current.value);
 
-        if(name.current.value!="")
+        if(( photoURL.current.value.length > 1000 ))
+            alert("Size matters! Please enter a short URL");
+
+        if(name.current.value!="" && ( photoURL.current.value.length <= 1000 ))
             await  auth.createUserWithEmailAndPassword(email.current.value,password.current.value)
          .then( async (userAuth)=>{
            
