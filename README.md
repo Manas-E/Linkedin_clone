@@ -25,11 +25,11 @@ Tech Used:
 
 ## Login Screen
 
-![linkedin-project](https://github.com/Manas-E/Linkedin_clone/blob/master/screenshots/li_home.png/li_login.png)
+![linkedin-project](https://github.com/Manas-E/Linkedin_clone/blob/master/screenshots/li_login.png)
 
 ## Main Screen 
 
-![linkedin-project](https://github.com/Manas-E/Linkedin_clone/blob/master/screenshots/li_home.png/li_home.png)
+![linkedin-project](https://github.com/Manas-E/Linkedin_clone/blob/master/screenshots/li_home.png)
 
 # Getting Started with Create React App
 
