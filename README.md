@@ -1,3 +1,10 @@
+# New Features in Version 2
+- Responsive Design 
+- Like counter with microanimation
+- Search functionality
+- Mobile friendly view with Dark mode
+- removed some bug issues
+
 # LinkedIn UI Clone 
 A replication of linkedin created with React.js and firebase. Implemented with redux to monitor user login and logout and material-ui Icons are used to make it look more identical. Enhanced with google news api to fetch news from tech domain.
 
