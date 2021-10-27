@@ -35,7 +35,6 @@ function HomeScreen(){
         else{
             dispatch(logout());
   
-  
         }
       })
     },[]);

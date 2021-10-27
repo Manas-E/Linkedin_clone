@@ -6,9 +6,6 @@ import "./SideBar.css"
 
 function SideBar() {
 
-
-
-
     const recent = (topic) =>{
         return <div className="recentItems"> 
                 <span>#</span>
@@ -28,7 +25,7 @@ function SideBar() {
         <div className='sidebar'>
             <div className="sidebartop">
 
-                <img  src="https://analyticsindiamag.com/wp-content/uploads/2020/10/7d744a684fe03ebc7e8de545f97739dd.jpg"/>
+                <img  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5z8-3WshCsE_BWkuj0CSCR3MVTC1WsA8RfA&usqp=CAU"/>
                 <Avatar className='sidebartopAvatar' src={!user?.photoURL && ""}>{!user?.photoURL && !user?.displayName[0] && ""}</Avatar>
                 <h2>{user?.displayName}</h2>
                 <h4>{user?.email}</h4>

@@ -50,7 +50,6 @@ function Login() {
 
     const loginto=(e)=>{
         e.preventDefault();
-        console.log("hell yeah");
         auth.signInWithEmailAndPassword(email.current.value,password.current.value).then(
             (userAuth) =>{
                 console.log(userAuth);

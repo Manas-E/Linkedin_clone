@@ -16,14 +16,14 @@ function Widget() {
     const news = (heading,sub,url)=>{
        
   return   <div className="article">
-        <div className="articleleft"><FiberManualRecordIcon className="bullet"/> </div>
-<div onClick={()=>{window.open(url);}} className="articleright">
-        <h3   >{heading}</h3>
+                <div className="articleleft"><FiberManualRecordIcon className="bullet"/> </div>
+                <div onClick={()=>{window.open(url);}} className="articleright">
+                    <h3   >{heading}</h3>
 
-        <p>{sub}</p>
+                    <p>{sub}</p>
 
-        </div>
-    </div>
+                </div>
+            </div>
     }
 
     useEffect( ()=> { 
