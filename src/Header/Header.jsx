@@ -113,7 +113,7 @@ function Header() {
 
                 <HeaderOption title='Messaging' Icon={ChatIcon} />
                 <HeaderOption title='Notifications' Icon={NotificationsIcon} />
-                <HeaderOption onClick={logoutfunction} avatar="dashdsb" title="Me"></HeaderOption>                
+                <HeaderOption onClick={logoutfunction} avatar="dashdsb" title="Logout"></HeaderOption>                
 
 
             </div>

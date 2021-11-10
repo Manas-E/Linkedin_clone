@@ -24,8 +24,8 @@ function HeaderOption({avatar,Icon, title,onClick}) {
             </div>
 
             <div >
-
-            <h1 className="HeaderOption_title">{title} </h1>
+            {title &&    <h1 className="HeaderOption_title">{title} </h1>
+ }
             </div>
 
         
