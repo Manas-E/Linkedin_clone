@@ -48,6 +48,22 @@ function Login() {
       
     }
 
+    const LoginAsTest = ()=>{
+        auth.signInWithEmailAndPassword("test@test.com","123456").then(
+            (userAuth) =>{
+                console.log(userAuth);
+                dispatch(login({
+                     
+          email: userAuth.user.email,
+          uid:userAuth.user.uid,
+          displayName:userAuth.user.displayName,
+          photoURL:userAuth.user.photoURL,
+         
+                }))
+            }
+        ).catch((err)=>{alert(err)})
+
+    }
     const loginto=(e)=>{
         e.preventDefault();
         auth.signInWithEmailAndPassword(email.current.value,password.current.value).then(
@@ -80,6 +96,7 @@ function Login() {
                 <button type="submit" onClick={loginto}>Sign in</button>
                 <p>Not a Member?<span onClick={register} className="reg"> Register Now</span></p>
             </form>
+            <button style={{padding:"10px", margin:"10px"}} onClick={LoginAsTest}>Login As Test User</button>
 
         </div>
     )
