@@ -14,8 +14,10 @@ import { selectUser } from './features/userSlice';
 import {forwardRef} from "react";
 import { db } from './firebasefile';
 import HeaderOption from './Header/HeaderOption';
+import Comment from "./Comment"
 
-
+import AddCircleIcon from '@mui/icons-material/AddCircle';
+import FlipMove from "react-flip-move";
 
 const  Post = forwardRef(( {name,desc,photoURL,msg,idData=0},ref)=> {
 
@@ -23,8 +25,8 @@ const  Post = forwardRef(( {name,desc,photoURL,msg,idData=0},ref)=> {
     const [isLiked,setLiked]= useState(false);
     const [likeCount,setlikeCount] =useState(0);
     const  [iscomment,setiscomment] = useState(false);
-    const comment  = useRef();
     const [commentsList,setcommentsList] = useState([]);
+    const comment  = useRef();
 
 
     var likeNumber=31;
@@ -80,14 +82,16 @@ const  Post = forwardRef(( {name,desc,photoURL,msg,idData=0},ref)=> {
   
 
 
-    const addcomment = async ()=>{
+    const addcomment = async (commentValue)=>{
 
         var comments = [];
+
         getcommentList();
         const commentData = {
             commentName: user.displayName, 
             commentPhotoURL: user.photoURL,
-            commentMsg:  comment.current.value,
+            commentMsg:  commentValue,
+            commentUser: user.email,
         }
 
       
@@ -110,6 +114,17 @@ const  Post = forwardRef(( {name,desc,photoURL,msg,idData=0},ref)=> {
              }) 
     }
 
+
+    const deleteComment =  async (idx)=>{
+
+        commentsList.splice(idx,1);
+
+        const  data1 = await db.collection("posts").doc(idData).update({comments:commentsList}).then(
+            (res)=>{ 
+                console.log("comment deleted")
+             }) 
+             
+    }
 
 
     return (
@@ -146,31 +161,27 @@ const  Post = forwardRef(( {name,desc,photoURL,msg,idData=0},ref)=> {
                 { name === user.displayName &&   <span onClick={()=>deleteData()}>   <InputOption   name="Delete" Icon={DeleteIcon} />   </span>}
 
             </div>
-            {iscomment ? <div>
+            {iscomment ?    <div>
 
                 {/* {list of comments} */}
                 {console.log(commentsList,"<<<<<<<<<<<<<<<<<<<<,<<<<<<<<<<<<<<<<<<<<<<<<<<")}
-                {commentsList.map((a)=>
-                  
-                  <div className="comment">
-                      <Avatar className="HeaderOption_icon" src={a.commentPhotoURL}>{!a.commentPhotoURL && !a.commentName[0] && "" }</Avatar>
-                      <div className="commentBody">
-                          <h2>{a.commentName}</h2>
-                          <p>{a.commentMsg}</p>
-
-                    </div>
-
-                  </div>
-                  
+                
+                <FlipMove>
+                {commentsList.map((a,idx)=>
+             
+                    <Comment  a={a} key={idx} user={user} deleteComment={deleteComment}   idx={idx} />
+              
                 )}
-
-
-                    <div className="commentSection">
+                </FlipMove>
+                  <div className="commentSection">
                     <HeaderOption  avatar="dashdsb" ></HeaderOption>                
-                        <input ref={comment} />
-                        <button onClick={addcomment}>Comment</button>
-                    </div>
-            </div>    :  ""}
+                    <input ref={comment} />
+                    <AddCircleIcon className="commentIcon fa-4x"  onClick={()=>addcomment(comment.current.value)}/>
+                 </div>
+
+                  
+            </div> 
+             :  ""}
         </div>
     )
 })
